@@ -1,0 +1,22 @@
+{
+	"name": "pkg-name",
+	"description": "Doing Something!",
+	"version": "0.0.0",
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "dev-bundles/background.js"
+	},
+	"options_page": "src/settings-page/settings-page.html",
+	"action": {
+		"default_popup": "src/popup/popup.html"
+	},
+	"content_scripts": [
+		{
+		  "matches": [
+			"*://*/*"
+		  ],
+		  "js": ["dev-bundles/content.js"]
+		}
+	],
+	"permissions": []
+ }
